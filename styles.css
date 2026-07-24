@@ -1,0 +1,195 @@
+:root {
+  --color-brown: #81481d;
+  --color-pink: #fdf3f1;
+  --color-light-yellow: #fffce0;
+
+  --hero-title-font-size-desktop: 96px;
+  --section-title-font-size-desktop: 48px;
+  --heading-font-size-desktop: 24px;
+  --section-label-font-size-desktop: 22px;
+  --subheading-font-size-desktop: 36px;
+  --paragraph-font-size-desktop: 18px;
+  --body-font-size-desktop: 16px;
+  --label-font-size-desktop: 14px;
+
+  --hero-title-font-size-mobile: 48px;
+  --section-title-font-size-mobile: 32px;
+  --heading-font-size-mobile: 18px;
+  --section-label-font-size-mobile: 16px;
+  --subheading-font-size-mobile: 26px;
+  --paragraph-font-size-mobile: 16px;
+  --body-font-size-mobile: 14px;
+  --label-font-size-mobile: 10px;
+  --small-font-size-mobile: 8px;
+  /* --label-font-size-mobile: 12px; */
+
+  --hero-title-font-size-tablet: 64px;
+  --section-title-font-size-tablet: 40px;
+  --heading-font-size-tablet: 20px;
+  --section-label-font-size-tablet: 18px;
+  --subheading-font-size-tablet: 30px;
+  --paragraph-font-size-tablet: 16px;
+  --body-font-size-tablet: 15px;
+  --label-font-size-tablet: 12px;
+  --small-font-size-tablet: 10px;
+
+  --padding-xs: 4px;
+  --padding-sm: 8px;
+  --padding-md: 16px;
+  --padding-lg: 24px;
+  --padding-xl: 32px;
+  --padding-xxl: 48px;
+  --padding-xxxl: 78px;
+
+  --gap-xs: 8px;
+  --gap-sm: 12px;
+  --gap-md: 20px;
+  --gap-lg: 30px;
+  --gap-xl: 40px;
+  --gap-xxl: 60px;
+
+  /* Page & Section defaults */
+  --page-padding-horizontal: 10px;
+  --page-padding-vertical: 100px;
+  --section-gap: 150px;
+
+  --main-font: "Bagel Fat One", cursive;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--main-font);
+  background: var(--color-pink);
+  color: var(--color-brown);
+}
+
+#page {
+  width: min(1100px, 92%);
+  margin: auto;
+  transition: 0.3s;
+}
+
+.dim {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+header {
+  text-align: center;
+  padding: var(--padding-md);
+  margin-top: 40px;
+  margin-bottom: var(--gap-xxl);
+}
+
+h1 {
+  font-size: var(--section-title-font-size-desktop);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--gap-lg);
+  margin-bottom: var(--gap-xxl);
+}
+
+.card {
+  /* background: var(--color-brown);
+  aspect-ratio: 1.45;
+  border-radius: 40px; */
+  aspect-ratio: 1.45;
+  background-image: url("assets/bread-container.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card.disabled {
+  opacity: 0.4;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 40px;
+  font-size: var(--label-font-size-desktop);
+}
+
+/* Overlay */
+
+#overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.hidden {
+  display: none !important;
+}
+
+.popup {
+  position: relative;
+  width: min(400px, 90%);
+  background: var(--color-light-yellow);
+  border-radius: 30px;
+  padding: 70px 30px;
+  text-align: center;
+}
+
+.popup p {
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+
+  width: 42px;
+  height: 42px;
+
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+
+  background: transparent;
+  color: var(--color-brown);
+  font-family: var(--main-font);
+  font-size: 22px;
+}
+
+/* Responsive - Mobile */
+@media (max-width: 768px) {
+  :root {
+    --section-title-font-size-desktop: 26px;
+    --label-font-size-desktop: 16px;
+    --gap-lg: 20px;
+    --gap-xxl: 40px;
+  }
+
+  .cards {
+    gap: 20px;
+  }
+
+  .popup {
+    padding: 60px 20px;
+  }
+
+  .popup p {
+    font-size: 18px;
+  }
+}
