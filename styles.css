@@ -66,6 +66,7 @@ body {
   font-family: var(--main-font);
   background: var(--color-pink);
   color: var(--color-brown);
+  cursor: url("/assets/bread-cursor.svg"), auto;
 }
 
 #page {
@@ -92,7 +93,7 @@ h1 {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: var(--gap-lg);
   margin-bottom: var(--gap-xxl);
 }
@@ -121,7 +122,7 @@ h1 {
 footer {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 40px;
+  padding-bottom: var(--padding-xxl);
   font-size: var(--label-font-size-desktop);
 }
 
@@ -150,7 +151,7 @@ footer {
 }
 
 .popup p {
-  font-size: 22px;
+  font-size: var(--section-label-font-size-desktop);
   line-height: 1.5;
 }
 
@@ -169,20 +170,72 @@ footer {
   background: transparent;
   color: var(--color-brown);
   font-family: var(--main-font);
-  font-size: 22px;
+  font-size: var(--section-label-font-size-desktop);
 }
 
 /* Responsive - Mobile */
 @media (max-width: 768px) {
   :root {
-    --section-title-font-size-desktop: 26px;
-    --label-font-size-desktop: 16px;
-    --gap-lg: 20px;
-    --gap-xxl: 40px;
+    --color-brown: #81481d;
+    --color-pink: #fdf3f1;
+    --color-light-yellow: #fffce0;
+
+    --hero-title-font-size-desktop: 96px;
+    --section-title-font-size-desktop: 48px;
+    --heading-font-size-desktop: 24px;
+    --section-label-font-size-desktop: 22px;
+    --subheading-font-size-desktop: 36px;
+    --paragraph-font-size-desktop: 18px;
+    --body-font-size-desktop: 16px;
+    --label-font-size-desktop: 14px;
+
+    --hero-title-font-size-mobile: 48px;
+    --section-title-font-size-mobile: 32px;
+    --heading-font-size-mobile: 18px;
+    --section-label-font-size-mobile: 16px;
+    --subheading-font-size-mobile: 26px;
+    --paragraph-font-size-mobile: 16px;
+    --body-font-size-mobile: 14px;
+    --label-font-size-mobile: 10px;
+    --small-font-size-mobile: 8px;
+    /* --label-font-size-mobile: 12px; */
+
+    --hero-title-font-size-tablet: 64px;
+    --section-title-font-size-tablet: 40px;
+    --heading-font-size-tablet: 20px;
+    --section-label-font-size-tablet: 18px;
+    --subheading-font-size-tablet: 30px;
+    --paragraph-font-size-tablet: 16px;
+    --body-font-size-tablet: 15px;
+    --label-font-size-tablet: 12px;
+    --small-font-size-tablet: 10px;
+
+    --padding-xs: 4px;
+    --padding-sm: 8px;
+    --padding-md: 16px;
+    --padding-lg: 24px;
+    --padding-xl: 32px;
+    --padding-xxl: 48px;
+    --padding-xxxl: 78px;
+
+    --gap-xs: 8px;
+    --gap-sm: 12px;
+    --gap-md: 20px;
+    --gap-lg: 30px;
+    --gap-xl: 40px;
+    --gap-xxl: 60px;
+
+    /* Page & Section defaults */
+    --page-padding-horizontal: 10px;
+    --page-padding-vertical: 100px;
+    --section-gap: 150px;
+
+    --main-font: "Bagel Fat One", cursive;
   }
 
   .cards {
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--gap-md);
   }
 
   .popup {
@@ -190,6 +243,6 @@ footer {
   }
 
   .popup p {
-    font-size: 18px;
+    font-size: var(--paragraph-font-size-mobile);
   }
 }
