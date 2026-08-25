@@ -50,3 +50,6 @@ You can deploy it easily on **Netlify** or any static hosting service.
 
 ## License
 This project is licensed under the MIT License — See `LICENSE` file for more information.
+
+Note: This project is a personal dedication and is **not open for contributions**.  
+Forks are allowed, but pull requests or direct contributions will not be accepted.
