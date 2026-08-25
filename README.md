@@ -8,7 +8,8 @@ May God bless you with good health, peace, prosperity, and many beautiful moment
 ---
 
 ## Tech Stack
-- **Frontend** – HTML, CSS, JavaScript  
+- **Frontend** – HTML, CSS, JavaScript
+- **Hosting** – Netlify
 
 ---
 
