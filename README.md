@@ -28,7 +28,7 @@ To get a local copy up and running, follow these simple steps:
    ```bash
    cd surprise-mom
    ```
-3. Open `index.html` in your browser.
+3. Locate the index.html file in the folder and open it with your browser.
 
 ---
 
